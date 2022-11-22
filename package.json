@@ -1,0 +1,44 @@
+{
+  "name": "node-svg2png",
+  "version": "0.1.0",
+  "description": "node-svg2png",
+  "keywords": [
+    "node-svg2png"
+  ],
+  "bin": {
+    "node-svg2png": "./bin/node-svg2png.js"
+  },
+  "files": [
+    "bin/**/*.js",
+    "lib/**/*.js"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/node-svg2png.git"
+  },
+  "dependencies": {
+    "chalk": "4",
+    "commander": "^9.4.1",
+    "playwright": "1"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "eslint-plugin-mocha": "^4.11.0",
+    "git-contributor": "1",
+    "husky": "*",
+    "mocha": "*",
+    "nyc": "*"
+  },
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=text mocha",
+    "lint": "eslint . --fix",
+    "contributor": "git-contributor"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "license": "MIT"
+}
